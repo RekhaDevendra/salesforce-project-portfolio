@@ -1,4 +1,4 @@
-# Project 3: Security Settings – Role-Based Access for Sales Managers and Associates
+# Project 5: Security Settings – Role-Based Access for Sales Managers and Associates
 
 ##  Objective:
 Set up security rules ensuring different levels of data access based on role—so Sales Managers can edit all leads, but Sales Associates can only edit leads assigned to them.
@@ -44,8 +44,44 @@ Set up security rules ensuring different levels of data access based on role—s
 ### 5. Create Sharing Rules
 - **Rule**: Share all leads owned by Sales Associates with their Managers.
   - Ensures that Sales Managers can always access and edit their associates’ leads for performance tracking, auditing, and support.
+ 
+### 6. Workflow Rule: High-Value Lead Reminder
 
-### 6. Test Scenarios
+**Object**: Lead  
+**Rule Criteria**:
+
+Lead Value Category = "High" AND
+LastModifiedDate >= TODAY() - 3
+
+Action Type: Send Email Alert
+Email Template: "High Value Lead Reminder"
+
+Time-Trigger: 3 Days after LastModifiedDate
+
+Description:
+Automatically notify the Sales Manager when a high-value lead has not been updated within 3 days.
+
+### 7. Validation Rule: Email Field Cannot Be Empty
+Object: Lead
+Formula:
+
+ISBLANK(Email)
+Error Message:
+"Email field cannot be empty."
+
+### 8. Create Sharing Rule: Share Leads with Sales Managers
+Rule Name: Share Leads with Sales Managers
+Object: Lead
+Criteria:
+
+Lead Owner = Sales Associate
+Access Level: Read/Write
+
+Description:
+Grant Sales Managers access to all leads owned by Sales Associates.
+
+
+### 9. Test Scenarios
 - **Test Users**: 
   - Created a **Sales Manager** user with full access to all leads.
   - Created a **Sales Associate** user with restricted access, limited to only their assigned leads.
@@ -53,7 +89,7 @@ Set up security rules ensuring different levels of data access based on role—s
 
 ---
 
-##  Outcome:
+##  10. Outcome:
 - **Data Confidentiality**: Ensured that sensitive lead data is only accessible to authorized users.
 - **Prevention of Record Overwriting**: Minimized the risk of accidental data overwriting by restricting Sales Associates’ access to their own records only.
 - **Improved Compliance**: Established strong internal controls and compliance by adhering to role-based access and data security best practices.
