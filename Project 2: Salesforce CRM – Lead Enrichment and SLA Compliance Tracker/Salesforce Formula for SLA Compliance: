@@ -1,0 +1,13 @@
+Formula Field: SLA Compliance (Formula)
+IF( 
+   AND( 
+     NOT(ISBLANK(Lead_Receipt_Time__c)),
+     NOT(ISBLANK(Processing_Completion_Time__c))
+   ), 
+   IF( 
+     Processing_Completion_Time__c - Lead_Receipt_Time__c <= 1, 
+     "On Time", 
+     "Late"
+   ), 
+   "Incomplete"
+)
