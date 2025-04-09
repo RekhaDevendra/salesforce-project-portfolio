@@ -60,7 +60,7 @@ Set up security rules ensuring different levels of data access based on role—s
 
 ---
 
-## 🔧 Additional Notes:
+##  Additional Notes:
 - The **Organization-Wide Defaults (OWD)** setting of **Private** ensures the security of lead data, making it essential for controlling data access within the company.
 - **Role Hierarchy** ensures that managers have access to the records of those below them, enabling efficient oversight.
 - **Sharing Rules** are critical for maintaining flexibility in data access while adhering to the principle of least privilege.
