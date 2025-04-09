@@ -35,54 +35,11 @@ To better capture and track lead enrichment and SLA metrics, we customized Sales
 - **SLA Timestamps** (to capture timestamps for lead receipt and processing completion)
 
 **Salesforce Validation Rule Example**:
-```plaintext
+
 Rule: Ensure Email and Phone are Not Blank
 Formula:
 ISBLANK(Email) || ISBLANK(Phone)
 Error Message: "Email and Phone fields are required."
-# Salesforce CRM – Lead Enrichment and SLA Compliance Tracker
-
-## Objective:
-The goal of this project was to streamline the lead generation process, track SLA metrics, and enhance the accuracy of lead data for new business acquisition using Salesforce CRM. This solution automated data enrichment, improved lead management, and ensured 100% SLA compliance for lead processing, directly improving sales efficiency.
-
----
-
-## Tools Used:
-- **Salesforce CRM**: Central platform for managing and automating lead data.
-- **ZoomInfo**: External data source for enriching lead profiles with job titles, company size, and industry.
-- **Microsoft Excel**: For conducting monthly data audits and exporting lead data.
-- **LinkedIn Sales Navigator**: To identify and enrich leads with additional contact details and company info.
-- **Salesforce Validation Rules**: Ensuring data integrity (e.g., ensuring email and phone fields are not empty).
-- **Salesforce Reports & Dashboards**: To track SLA compliance, visualize lead progress, and monitor team performance.
-
----
-
-## Steps Taken:
-
-### 1. Lead Data Enrichment Workflow Setup
-Identified data gaps in incoming leads, which were sourced from **LinkedIn** and **ZoomInfo**. 
-
-**Action Steps:**
-- Developed a consistent process for enriching the incoming leads by verifying the following fields:
-  - **Email** and **Phone**
-  - **Job Titles**, **Company Size**, **Location**
-  - **Industry Vertical** (using custom fields)
-  
-### 2. Salesforce Customization
-To better capture and track lead enrichment and SLA metrics, we customized Salesforce:
-
-**Custom Fields Created:**
-- **Lead Source Details** (e.g., LinkedIn, ZoomInfo)
-- **Contact Verification Status** (to track whether email, phone, and other fields were validated)
-- **SLA Timestamps** (to capture timestamps for lead receipt and processing completion)
-
-**Salesforce Validation Rule Example**:
-```plaintext
-Rule: Ensure Email and Phone are Not Blank
-Formula:
-ISBLANK(Email) || ISBLANK(Phone)
-Error Message: "Email and Phone fields are required."
-
 
 This validation rule ensured that leads could not be saved without essential contact information, improving data accuracy.
 
