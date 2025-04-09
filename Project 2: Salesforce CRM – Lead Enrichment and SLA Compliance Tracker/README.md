@@ -1,11 +1,11 @@
 # Salesforce CRM – Lead Enrichment and SLA Compliance Tracker
 
-## Objective:
+##  Objective:
 The goal of this project was to streamline the lead generation process, track SLA metrics, and enhance the accuracy of lead data for new business acquisition using Salesforce CRM. This solution automated data enrichment, improved lead management, and ensured 100% SLA compliance for lead processing, directly improving sales efficiency.
 
 ---
 
-## Tools Used:
+##  Tools Used:
 - **Salesforce CRM**: Central platform for managing and automating lead data.
 - **ZoomInfo**: External data source for enriching lead profiles with job titles, company size, and industry.
 - **Microsoft Excel**: For conducting monthly data audits and exporting lead data.
@@ -15,7 +15,7 @@ The goal of this project was to streamline the lead generation process, track SL
 
 ---
 
-## Steps Taken:
+##  Steps Taken:
 
 ### 1. Lead Data Enrichment Workflow Setup
 Identified data gaps in incoming leads, which were sourced from **LinkedIn** and **ZoomInfo**. 
@@ -35,7 +35,6 @@ To better capture and track lead enrichment and SLA metrics, we customized Sales
 - **SLA Timestamps** (to capture timestamps for lead receipt and processing completion)
 
 **Salesforce Validation Rule Example**:
-
 Rule: Ensure Email and Phone are Not Blank
 Formula:
 ISBLANK(Email) || ISBLANK(Phone)
@@ -43,7 +42,8 @@ Error Message: "Email and Phone fields are required."
 
 This validation rule ensured that leads could not be saved without essential contact information, improving data accuracy.
 
-3. SLA Compliance Monitoring
+
+### 3. SLA Compliance Monitoring
 To monitor compliance with SLA metrics, we implemented time-stamped fields that tracked the following:
 
 Lead Receipt Time
@@ -52,11 +52,8 @@ Lead Processing Completion Time
 
 These timestamps were used to calculate SLA compliance, ensuring leads were processed within a defined period.
 
-Salesforce Formula for SLA Compliance:
+### Salesforce Formula for SLA Compliance:
 
-plaintext
-Copy
-Edit
 Formula Field: SLA Compliance (Formula)
 IF( 
    AND( 
@@ -70,10 +67,10 @@ IF(
    ), 
    "Incomplete"
 )
+
 This formula checked if the lead was processed within 1 day (or a defined SLA period) and marked the lead as "On Time" or "Late".
 
-
-## Salesforce Reports:
+### Salesforce Reports:
 
 Created weekly and monthly reports that displayed SLA compliance statistics:
 
@@ -83,25 +80,25 @@ Leads that missed the SLA window
 
 Trends in lead processing over time
 
-Dashboards:
+### Dashboards:
 
 Developed interactive SLA Compliance Dashboards for the HR Services and CSSR teams to visualize the SLA metrics and ensure that no leads slipped through the cracks.
 
-4. Collaboration with Sales Teams
+### 4. Collaboration with Sales Teams
 We implemented a "Demo-Ready" lead list view based on qualification criteria (e.g., high-value leads, verified contact info, and proper industry tagging).
 
-Action Steps:
+### Action Steps:
 
 Conducted training sessions for sales reps on how to filter and prioritize leads using this custom view.
 
 Provided real-time feedback and support during prospecting campaigns, ensuring reps could access the highest-quality leads.
 
-5. Data Quality Assurance
+### 5. Data Quality Assurance
 To maintain the quality and accuracy of lead data, we set up a monthly data audit process using Salesforce exports and Microsoft Excel:
 
-Audit Process:
+### Audit Process:
 
-Exported lead data from Salesforce and used Excel to:
+** Exported lead data from Salesforce and used Excel to:
 
 Identify and remove duplicates.
 
@@ -111,13 +108,8 @@ Ensure all leads met qualification criteria before being passed to outbound sale
 
 This ensured only the highest-quality leads were passed through to sales teams for conversion.
 
-6. Recognition
-Recognized for supporting high-profile clients, enabling quicker deal closures, and ensuring data quality in Salesforce.
-
-📈 Outcome:
+Outcome:
 Lead Turnaround Time reduced by 30%.
-
-Achieved 100% SLA Compliance for lead data submission over 12 months.
 
 Contributed to a 15% increase in qualified demo conversions.
 
