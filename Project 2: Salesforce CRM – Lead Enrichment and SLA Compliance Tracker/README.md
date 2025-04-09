@@ -35,9 +35,13 @@ To better capture and track lead enrichment and SLA metrics, we customized Sales
 - **SLA Timestamps** (to capture timestamps for lead receipt and processing completion)
 
 **Salesforce Validation Rule Example**:
+
 Rule: Ensure Email and Phone are Not Blank
+
 Formula:
+
 ISBLANK(Email) || ISBLANK(Phone)
+
 Error Message: "Email and Phone fields are required."
 
 This validation rule ensured that leads could not be saved without essential contact information, improving data accuracy.
