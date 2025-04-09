@@ -1,0 +1,17 @@
+### 4. Create Validation Rule: Ensure Email is Not Empty
+
+**Object**: Lead  
+**Rule Name**: `Email_Required_on_Lead`  
+**Formula**:  
+
+ISBLANK(Email)
+
+## Error Message:
+
+"Email field cannot be empty."
+
+Error Location: Email field
+
+## Description:
+
+This validation rule ensures that when creating or updating a lead, the Email field is never left empty, thus maintaining data integrity.
