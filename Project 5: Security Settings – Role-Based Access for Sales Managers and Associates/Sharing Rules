@@ -1,0 +1,14 @@
+### 6. Create Sharing Rule: Share Leads with Sales Managers
+
+**Rule Name**: Share Leads with Sales Managers  
+**Object**: Lead  
+**Criteria**:  
+- **Lead Owner = Sales Associate**
+
+**Sharing Rule Type**: **Owner-Based Sharing**  
+**Access Level**: **Read/Write** (Sales Managers can edit all leads owned by Sales Associates)
+
+**Description**:  
+This sharing rule automatically grants Sales Managers access to all leads owned by Sales Associates, enabling them to view and edit those leads.
+
+---
