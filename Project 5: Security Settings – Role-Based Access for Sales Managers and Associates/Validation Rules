@@ -15,3 +15,21 @@ Error Location: Email field
 ## Description:
 
 This validation rule ensures that when creating or updating a lead, the Email field is never left empty, thus maintaining data integrity.
+
+5. Create Validation Rule: Ensure Lead Value is Set for High-Value Leads
+Object: Lead
+Rule Name: High_Lead_Require_Value
+Formula:
+
+AND(
+  ISPICKVAL(Lead_Value_Category, "High"),
+  ISBLANK(Lead_Value)
+)
+
+Error Message:
+"Lead Value must be set for high-value leads."
+
+Error Location: Lead Value field
+
+Description:
+This rule ensures that for high-value leads (where the Lead Value Category is "High"), the Lead Value field is not left empty.
