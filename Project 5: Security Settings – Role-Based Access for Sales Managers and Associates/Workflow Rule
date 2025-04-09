@@ -1,0 +1,27 @@
+### 2. Create Workflow Rule: High-Value Lead Reminder
+
+**Object**: Lead  
+**Rule Criteria**:  
+- **Lead Value Category = "High"**
+- **LastModifiedDate >= TODAY() - 3**
+
+**Description**:  
+This workflow rule triggers when a high-value lead has not been contacted within 3 days of being modified (either created or updated).
+
+---
+
+### 3. Create Workflow Action: Email Notification
+
+**Action Type**: Send Email Alert  
+**Email Template**:  
+Name: High Value Lead – Reminder  
+Subject: "Reminder: High-Value Lead Needs Attention"  
+Body:  
+"Reminder: A high-value lead, {!Lead.Name}, has not been contacted within the SLA period of 3 days."
+
+**Time-Trigger**: 3 Days after **LastModifiedDate**
+
+**Description**:  
+The workflow action sends an email notification to the lead owner (Sales Rep) if the lead has not been updated within the specified 3-day period.
+
+---
