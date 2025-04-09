@@ -1,0 +1,5 @@
+**Salesforce Validation Rule**:
+Rule: Ensure Email and Phone are Not Blank
+Formula:
+ISBLANK(Email) || ISBLANK(Phone)
+Error Message: "Email and Phone fields are required."
