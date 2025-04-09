@@ -115,7 +115,8 @@ IF(
 )
 This formula checked if the lead was processed within 1 day (or a defined SLA period) and marked the lead as "On Time" or "Late".
 
-Salesforce Reports:
+
+## Salesforce Reports:
 
 Created weekly and monthly reports that displayed SLA compliance statistics:
 
