@@ -1,4 +1,4 @@
-# Project 2: Salesforce CRM – Prospect Account Segmentation & Demo Conversion Support
+# Project 1: Salesforce CRM – Prospect Account Segmentation & Demo Conversion Support
 
 ## Objective:
 To segment prospect accounts by industry and engagement potential, helping sales teams prioritize outreach and increase demo conversions.
